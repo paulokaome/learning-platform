@@ -12,14 +12,13 @@ export function Subscribe() {
 
   async function handleSubscriber(event: FormEvent) {
     event.preventDefault();
-
+    navigate("/events");
     await createSubscriber({
       variables: {
         name,
         email,
       },
     });
-    navigate("/events");
   }
 
   return (
